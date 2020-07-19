@@ -1,0 +1,39 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="ROSBOT"/>
+  <arg name="map_file" default="$(find rosbot_navigation)/maps/map.yaml"/>
+  <arg name="open_rviz" default="false"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!--node pkg="tf" type="static_transform_publisher" name="base_footprint_base_link" args="0 0 0 0 0 0 base_footprint base_link 100"/-->
+  <include file="$(find meccanum_kinematics)/launch/meccanum_kinematics.launch"/>
+
+  <!-- Turtlebot3 -->
+  <!--include file="$(find rosbot_navigation)/launch/urdf_launch.launch"/-->
+    <!--arg name="model" value="$(arg model)" /-->
+  <!--/include-->
+  <!-- lidar package-->
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!--node pkg="tf" type="static_transform_publisher" name="base_footprint_base_link" args="0 0 0 0 0 0 base_footprint base_link 100"/-->
+  <!--include file="$(find odometry_publisher)/launch/odometry_publisher.launch"/-->
+  <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch"/>  
+  <!-- AMCL -->
+  <include file="$(find rosbot_navigation)/launch/amcl.launch"/>
+  <!--include file="$(find amcl)/examples/amcl_omni.launch" /-->
+
+  <!-- move_base -->
+  <!--include file="$(find rosbot_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include-->
+
+  <!-- rviz -->
+  <!--group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find rosbot_navigation)/rviz/rosbot.rviz"/>
+  </group-->
+  
+</launch>

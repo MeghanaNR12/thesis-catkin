@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/devel
+
+Name: robot_tf_setup
+Description: Description of robot_tf_setup
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/catkin_ws/devel/lib 
+Requires: 

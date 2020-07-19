@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/install
+
+Name: laser_geometry
+Description: Description of laser_geometry
+Version: 1.6.4
+Cflags: -I/home/pi/catkin_ws/install/include -I/usr/include -I/usr/include/eigen3
+Libs: -L/home/pi/catkin_ws/install/lib -llaser_geometry /usr/lib/arm-linux-gnueabihf/libboost_system.so /usr/lib/arm-linux-gnueabihf/libboost_thread.so /usr/lib/arm-linux-gnueabihf/libboost_chrono.so /usr/lib/arm-linux-gnueabihf/libboost_date_time.so /usr/lib/arm-linux-gnueabihf/libboost_atomic.so /usr/lib/arm-linux-gnueabihf/libpthread.so
+Requires: tf tf2

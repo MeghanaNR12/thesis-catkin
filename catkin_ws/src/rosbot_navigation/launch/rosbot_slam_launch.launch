@@ -1,0 +1,6 @@
+<launch>
+	<!-- Robot frames are provided along with robot state publisher -->
+	<include file="$(find my_urdf_tutorial)/launch/check_launch.launch"/>
+	<!-- Hector slam package-->
+	<include file="$(find hector_mapping)/launch/mapping_default.launch"/>
+</launch>

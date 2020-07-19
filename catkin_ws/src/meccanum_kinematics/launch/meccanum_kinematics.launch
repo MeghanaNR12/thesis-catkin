@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find rosserial_python)/launch/arduino.launch"/>
+  <node pkg="meccanum_kinematics" type="meccanum.py" name="meccanum" output="screen" />
+</launch>

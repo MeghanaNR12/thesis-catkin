@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/devel
+
+Name: agv_nav_stack
+Description: Description of agv_nav_stack
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/catkin_ws/devel/lib 
+Requires: move_base odometry_publisher rplidar_ros

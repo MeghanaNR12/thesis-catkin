@@ -1,0 +1,12 @@
+digraph G {
+"base_link" -> "laser"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1574952006.223 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /odometry_publisher\nAverage rate: 1.250 Hz\nMost recent transform: 1574952005.498 ( 0.724 sec old)\nBuffer length: 4.000 sec\n"];
+"base_link" -> "back_left_wheel_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1574952006.194 ( 0.028 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "back_right_wheel_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1574952006.194 ( 0.028 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "front_left_wheel_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1574952006.194 ( 0.028 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "front_right_wheel_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 1574952006.194 ( 0.028 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1574952006.223"[ shape=plaintext ] ;
+ }->"odom";
+}

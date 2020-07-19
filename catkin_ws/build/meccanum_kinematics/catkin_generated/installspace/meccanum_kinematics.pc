@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/install
+
+Name: meccanum_kinematics
+Description: Description of meccanum_kinematics
+Version: 0.8.0
+Cflags: -I/home/pi/catkin_ws/install/include
+Libs: -L/home/pi/catkin_ws/install/lib 
+Requires: rospy message_runtime
